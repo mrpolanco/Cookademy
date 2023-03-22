@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4721D429CAA01200FE352B /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4721D329CAA01200FE352B /* RecipeData.swift */; };
 		9B7168B829C4C4D600938E0B /* CookademyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7168B729C4C4D600938E0B /* CookademyApp.swift */; };
-		9B7168BA29C4C4D600938E0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7168B929C4C4D600938E0B /* ContentView.swift */; };
+		9B7168BA29C4C4D600938E0B /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7168B929C4C4D600938E0B /* RecipesListView.swift */; };
 		9B7168BC29C4C4D800938E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7168BB29C4C4D800938E0B /* Assets.xcassets */; };
 		9B7168BF29C4C4D800938E0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7168BE29C4C4D800938E0B /* Preview Assets.xcassets */; };
 		9B7168CB29C4C5B100938E0B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7168CA29C4C5B100938E0B /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B4721D329CAA01200FE352B /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		9B7168B429C4C4D600938E0B /* Cookademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cookademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7168B729C4C4D600938E0B /* CookademyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookademyApp.swift; sourceTree = "<group>"; };
-		9B7168B929C4C4D600938E0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9B7168B929C4C4D600938E0B /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
 		9B7168BB29C4C4D800938E0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B7168BE29C4C4D800938E0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B7168CA29C4C5B100938E0B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B4721D229CA9E0800FE352B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9B4721D329CAA01200FE352B /* RecipeData.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9B7168AB29C4C4D600938E0B = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +63,10 @@
 		9B7168B629C4C4D600938E0B /* Cookademy */ = {
 			isa = PBXGroup;
 			children = (
-				9B7168B729C4C4D600938E0B /* CookademyApp.swift */,
-				9B7168C929C4C59300938E0B /* Models */,
+				9B4721D229CA9E0800FE352B /* ViewModels */,
 				9B7168C529C4C52100938E0B /* Views */,
+				9B7168C929C4C59300938E0B /* Models */,
+				9B7168B729C4C4D600938E0B /* CookademyApp.swift */,
 				9B7168BB29C4C4D800938E0B /* Assets.xcassets */,
 				9B7168BD29C4C4D800938E0B /* Preview Content */,
 			);
@@ -73,7 +84,7 @@
 		9B7168C529C4C52100938E0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9B7168B929C4C4D600938E0B /* ContentView.swift */,
+				9B7168B929C4C4D600938E0B /* RecipesListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,7 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B7168BA29C4C4D600938E0B /* ContentView.swift in Sources */,
+				9B7168BA29C4C4D600938E0B /* RecipesListView.swift in Sources */,
+				9B4721D429CAA01200FE352B /* RecipeData.swift in Sources */,
 				9B7168B829C4C4D600938E0B /* CookademyApp.swift in Sources */,
 				9B7168CB29C4C5B100938E0B /* Recipe.swift in Sources */,
 			);
@@ -287,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cookademy/Preview Content\"";
+				DEVELOPMENT_TEAM = 4LC4FGMZQ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -315,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cookademy/Preview Content\"";
+				DEVELOPMENT_TEAM = 4LC4FGMZQ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
