@@ -15,6 +15,7 @@ struct RecipeCategoryGridView: View {
             LazyVGrid(columns: [GridItem()], content: {
                 ForEach(MainInformation.Category.allCases, id: \.self) { category in
                     Text(category.rawValue)
+                        .font(.title)
                 }
             })
             .navigationTitle("Categories")
