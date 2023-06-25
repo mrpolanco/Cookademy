@@ -11,14 +11,34 @@ struct RecipesListView: View {
     @EnvironmentObject private var recipeData: RecipeData
     let category: MainInformation.Category
 
-    var body: some View {
-        List {
-            ForEach(recipes) { recipe in
-                Text(recipe.mainInformation.name)
-            }
+    @State private var isPresenting = false
+    @State private var newRecipe = Recipe()
 
+    var body: some View {
+        NavigationStack {
+            List {
+                ForEach(recipes) { recipe in
+                    Text(recipe.mainInformation.name)
+                }
+
+            }
+            .navigationTitle(navigationTitle)
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isPresenting = true
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
+            })
+            .sheet(isPresented: $isPresenting, content: {
+                NavigationStack {
+                    ModifyRecipeView(recipe: $newRecipe)
+                        .navigationTitle("Add a New Recipe")
+                }
+            })
         }
-        .navigationTitle(navigationTitle)
     }
 }
 
