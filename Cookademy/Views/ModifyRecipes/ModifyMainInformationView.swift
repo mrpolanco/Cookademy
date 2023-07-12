@@ -13,7 +13,7 @@ struct ModifyMainInformationView: View {
 
     @Binding var mainInformation: MainInformation
 
-    var body: some view {
+    var body: some View {
         Form {
             TextField("Recipe Name", text: $mainInformation.name)
                 .listRowBackground(listBackgroundColor)
@@ -23,14 +23,12 @@ struct ModifyMainInformationView: View {
                 TextEditor(text: $mainInformation.description)
                     .listRowBackground(listBackgroundColor)
             }
-            Picker(selection: $mainInformation.category, label:
-                    HStack {
+            Picker(selection: $mainInformation.category, label: HStack {
                 Text("Category")
                 Spacer()
                 Text(mainInformation.category.rawValue)
             }) {
-                ForEach(MainInformation.Category.allCases,
-                        id: \.self) { category in
+                ForEach(MainInformation.Category.allCases, id: \.self) { category in
                     Text(category.rawValue)
                 }
             }
@@ -41,9 +39,15 @@ struct ModifyMainInformationView: View {
     }
 }
 
-
 struct ModifyMainInformationView_Previews: PreviewProvider {
+    @State static var mainInformation = MainInformation(name: "Test Name",
+                                                        description: "Test Description",
+                                                        author: "Test Author",
+                                                        category: .breakfast)
+    @State static var emptyInformation = MainInformation(name: "", description: "", author: "", category: .breakfast)
+
     static var previews: some View {
         ModifyMainInformationView(mainInformation: $mainInformation)
+        ModifyMainInformationView(mainInformation: $emptyInformation)
     }
 }
