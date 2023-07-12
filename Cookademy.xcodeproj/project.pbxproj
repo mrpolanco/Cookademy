@@ -19,6 +19,7 @@
 		9B7168CB29C4C5B100938E0B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7168CA29C4C5B100938E0B /* Recipe.swift */; };
 		9BD16FE22A5E4549004A741A /* ModifyMainInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16FE12A5E4549004A741A /* ModifyMainInformationView.swift */; };
 		9BD16FE42A5E4E1A004A741A /* ModifyIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16FE32A5E4E1A004A741A /* ModifyIngredientView.swift */; };
+		9BD16FE62A5E52C9004A741A /* ModifyIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16FE52A5E52C9004A741A /* ModifyIngredientsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		9B7168CA29C4C5B100938E0B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		9BD16FE12A5E4549004A741A /* ModifyMainInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyMainInformationView.swift; sourceTree = "<group>"; };
 		9BD16FE32A5E4E1A004A741A /* ModifyIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyIngredientView.swift; sourceTree = "<group>"; };
+		9BD16FE52A5E52C9004A741A /* ModifyIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyIngredientsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				9B6DE9662A48012D00FA9E59 /* ModifyRecipeView.swift */,
 				9BD16FE12A5E4549004A741A /* ModifyMainInformationView.swift */,
 				9BD16FE32A5E4E1A004A741A /* ModifyIngredientView.swift */,
+				9BD16FE52A5E52C9004A741A /* ModifyIngredientsView.swift */,
 			);
 			path = ModifyRecipes;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				9B6DE9452A465CE200FA9E59 /* RecipeCategoryGridView.swift in Sources */,
 				9B6DE9492A46756C00FA9E59 /* AppColor.swift in Sources */,
 				9B6DE9672A48012D00FA9E59 /* ModifyRecipeView.swift in Sources */,
+				9BD16FE62A5E52C9004A741A /* ModifyIngredientsView.swift in Sources */,
 				9B4721D429CAA01200FE352B /* RecipeData.swift in Sources */,
 				9B7168B829C4C4D600938E0B /* CookademyApp.swift in Sources */,
 				9BD16FE22A5E4549004A741A /* ModifyMainInformationView.swift in Sources */,
