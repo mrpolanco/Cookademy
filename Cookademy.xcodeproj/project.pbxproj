@@ -17,6 +17,7 @@
 		9B7168BC29C4C4D800938E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7168BB29C4C4D800938E0B /* Assets.xcassets */; };
 		9B7168BF29C4C4D800938E0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7168BE29C4C4D800938E0B /* Preview Assets.xcassets */; };
 		9B7168CB29C4C5B100938E0B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7168CA29C4C5B100938E0B /* Recipe.swift */; };
+		9BD16FE22A5E4549004A741A /* ModifyMainInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16FE12A5E4549004A741A /* ModifyMainInformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9B7168BB29C4C4D800938E0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B7168BE29C4C4D800938E0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B7168CA29C4C5B100938E0B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		9BD16FE12A5E4549004A741A /* ModifyMainInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyMainInformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6DE9662A48012D00FA9E59 /* ModifyRecipeView.swift */,
+				9BD16FE12A5E4549004A741A /* ModifyMainInformationView.swift */,
 			);
 			path = ModifyRecipes;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				9B6DE9672A48012D00FA9E59 /* ModifyRecipeView.swift in Sources */,
 				9B4721D429CAA01200FE352B /* RecipeData.swift in Sources */,
 				9B7168B829C4C4D600938E0B /* CookademyApp.swift in Sources */,
+				9BD16FE22A5E4549004A741A /* ModifyMainInformationView.swift in Sources */,
 				9B7168CB29C4C5B100938E0B /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
