@@ -7,9 +7,14 @@
 
 import SwiftUI
 
-struct ModifyDirectionView: View {
+struct ModifyDirectionView: ModifyComponentView {
     @Binding var direction: Direction
     let createAction: (Direction) -> Void
+
+    init(component: Binding<Direction>, createAction: @escaping (Direction) -> Void) {
+        self._direction = component
+        self.createAction = createAction
+    }
 
     private let listBackgroundColor = AppColor.background
     private let listTextColor = AppColor.foreground
@@ -36,11 +41,13 @@ struct ModifyDirectionView: View {
 }
 
 struct ModifyDirectionView_Previews: PreviewProvider {
-    @State static var emptyDirection = Direction(description: "", isOptional: false)
+    @State static var recipe = Recipe.testRecipes[0]
 
     static var previews: some View {
         NavigationView {
-            ModifyDirectionView(direction: $emptyDirection) { _ in return}
+            ModifyDirectionView(component: $recipe.directions[0]) { direction in
+                print(direction)
+            }
         }
     }
 }

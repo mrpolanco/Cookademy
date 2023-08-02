@@ -51,3 +51,4 @@ struct ModifyMainInformationView_Previews: PreviewProvider {
         ModifyMainInformationView(mainInformation: $emptyInformation)
     }
 }
+

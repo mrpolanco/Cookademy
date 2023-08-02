@@ -108,6 +108,7 @@ struct Direction: RecipeComponent {
         self.init(description: "", isOptional: false)
     }
 }
+
 extension Recipe {
     static let testRecipes: [Recipe] = [
         Recipe(mainInformation: MainInformation(name: "Dad's Mashed Potatoes",
