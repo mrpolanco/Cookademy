@@ -18,42 +18,44 @@ struct RecipesListView: View {
         NavigationStack {
             List {
                 ForEach(recipes) { recipe in
-                    Text(recipe.mainInformation.name)
+                    NavigationLink(recipe.mainInformation.name,
+                                   destination: RecipeDetailView(recipe: binding(for: recipe)))
                 }
 
             }
-            .navigationTitle(navigationTitle)
-            .toolbar(content: {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        isPresenting = true
-                    }, label: {
-                        Image(systemName: "plus")
-                    })
-                }
-            })
-            .sheet(isPresented: $isPresenting, content: {
-                NavigationStack {
-                    ModifyRecipeView(recipe: $newRecipe)
-                        .toolbar(content: {
-                            ToolbarItem(placement: .cancellationAction) {
-                                Button("Dismiss") {
+
+        }
+        .navigationTitle(navigationTitle)
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    isPresenting = true
+                }, label: {
+                    Image(systemName: "plus")
+                })
+            }
+        })
+        .sheet(isPresented: $isPresenting, content: {
+            NavigationStack {
+                ModifyRecipeView(recipe: $newRecipe)
+                    .toolbar(content: {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Dismiss") {
+                                isPresenting = false
+                            }
+                        }
+                        ToolbarItem(placement: .confirmationAction) {
+                            if newRecipe.isValid {
+                                Button("Add") {
+                                    recipeData.add(recipe: newRecipe)
                                     isPresenting = false
                                 }
                             }
-                            ToolbarItem(placement: .confirmationAction) {
-                                if newRecipe.isValid {
-                                    Button("Add") {
-                                        recipeData.add(recipe: newRecipe)
-                                        isPresenting = false
-                                    }
-                                }
-                            }
-                        })
-                        .navigationTitle("Add a New Recipe")
-                }
-            })
-        }
+                        }
+                    })
+                    .navigationTitle("Add a New Recipe")
+            }
+        })
     }
 }
 
@@ -67,14 +69,24 @@ extension RecipesListView {
         }
         return filteredRecipes
     }
+}
 
+extension RecipesListView {
     private var recipes: [Recipe] {
-        recipes(for: category)
+        recipeData.recipes(for: category)
     }
 
     private var navigationTitle: String {
         "\(category.rawValue) Recipes"
     }
+
+    func binding(for recipe: Recipe) -> Binding<Recipe> {
+        guard let index = recipeData.index(of: recipe) else {
+            fatalError("Recipe not found")
+        }
+        return $recipeData.recipes[index]
+    }
+
 }
 
 struct RecipesListView_Previews: PreviewProvider {
